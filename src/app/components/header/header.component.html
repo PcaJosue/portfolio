@@ -1,0 +1,25 @@
+<div class="header" [ngClass]="{'header__full':open}">
+
+    <img (click)="open=false;selectMenu('home')" class="header__logo" src="assets/images/logo-small.svg"
+        alt="wolf Logo" />
+
+    <div class="header__list">
+        <ng-container *ngTemplateOutlet="list"></ng-container>
+    </div>
+
+    <div *ngIf="open" class="header__list__full">
+        <ng-container *ngTemplateOutlet="list"></ng-container>
+    </div>
+
+    <mat-icon *ngIf="open" (click)="open =!open" class="header__menu opened">close</mat-icon>
+    <mat-icon *ngIf="!open" (click)="open =!open" class="header__menu closed">menu</mat-icon>
+
+</div>
+
+<ng-template #list>
+    <ng-container *ngFor="let key of menuList">
+        <div (click)="selectMenu(menuEnum[key])" class="header__list__item active"
+            [ngClass]="{active: helperService.menu == menuEnum[key]}">
+            {{menuEnum[key]}} </div>
+    </ng-container>
+</ng-template>

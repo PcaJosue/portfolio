@@ -1,0 +1,22 @@
+<div class="home">
+
+    <div class="home__icons">
+        <div class="home__icons__line"></div>
+        <a>
+            <img src="assets/images/linkedin.svg" alt="linkedin Logo" />
+        </a>
+        <a>
+            <img src="assets/images/github.svg" alt="github logo" />
+        </a>
+
+        <div class="home__icons__line"></div>
+    </div>
+    <div class="home__content">
+        <div class="home__content-title bounceIn" aria-label="Hi, I'm web developer">
+            <span class="bounceIn animated " *ngFor="let letter of title;let i=index" #s
+                (mouseover)="changeStyle($event,s)" (mouseout)="changeStyle($event,s)">{{letter != " " ? letter :
+                '&nbsp;'}}</span>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,65 @@
+@import 'src/app/styles/variables.scss';
+@import 'src/app/styles/animations.scss';
+
+.home{
+    background-color: $bg-dark;
+    height: 90vh;
+    display: flex;
+    padding: 1.5rem;
+
+    &__icons{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: 100%;
+        &__line{
+            height: 100%;
+            width: 2px;
+            align-self: center;
+            background-color: $white;
+        }
+        a{
+            cursor: pointer;
+        }
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 3em;
+
+        &-title{
+            display: flex;
+            color: $white;
+            font-family: $font-strong;
+            font-size: 5em;
+            border-bottom: 2px solid $white;
+            span{
+                opacity: 100%;
+                &:hover{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.animated{
+    animation-name: rubberBand;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+    animation-duration: .75s;
+    
+}
+
+@for $i from 1 through 21 {
+    span.bounceIn:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.1}s;
+    }
+}

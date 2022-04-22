@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+/**
+font-family: 'Anton',sans-serif;
+font-family: 'EB Garamond', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=EB+Garamond&display=swap'); 
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
