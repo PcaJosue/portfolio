@@ -1,8 +1,11 @@
 <div class="container">
 
   <app-header (onMenu)="changeMenu($event)"></app-header>
-  <section>
+  <section id="home" #home>
     <app-home></app-home>
+  </section>
+  <section id="About" #about>
+    <app-about></app-about>
   </section>
 
 

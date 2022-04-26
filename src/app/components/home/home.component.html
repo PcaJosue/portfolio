@@ -2,10 +2,10 @@
 
     <div class="home__icons">
         <div class="home__icons__line"></div>
-        <a>
+        <a [href]="links.linkedin" target="_blank">
             <img src="assets/images/linkedin.svg" alt="linkedin Logo" />
         </a>
-        <a>
+        <a [href]="links.github" target="=_blank">
             <img src="assets/images/github.svg" alt="github logo" />
         </a>
 
@@ -17,6 +17,20 @@
                 (mouseover)="changeStyle($event,s)" (mouseout)="changeStyle($event,s)">{{letter != " " ? letter :
                 '&nbsp;'}}</span>
         </div>
+        <div class="home__content-title presentation bounceIn2" aria-label="My name is Josue Pacheco">
+            <span class="bounceIn2 animated " *ngFor="let letter of presentation;let i=index" #p
+                (mouseover)="changeStyle($event,p)" (mouseout)="changeStyle($event,p)">{{letter != " " ? letter :
+                '&nbsp;'}}</span>
+        </div>
+
+        <div class="home__content-skills">
+            <span *ngFor="let skill of skills">{{skill}}</span>
+        </div>
+
+        <button class="home__content-contact"> <span>Contact me!</span> </button>
+
+
     </div>
+    <mat-icon class="home-icon">expand_more</mat-icon>
 
 </div>

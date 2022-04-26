@@ -8,6 +8,9 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title: string[] = "Hi, I'm Web Developer".split('');
+  presentation: string[] = "My name is Josué Pacheco".split('');
+  skills: string[] = ['Javascript', 'NodeJS', 'Angular2+', 'SQL', 'SCSS', 'Java'];
+  links = { linkedin: 'https://www.linkedin.com/in/alexander-josue-pacheco/', github: 'https://github.com/PcaJosue', email: 'pca.josue@gmail.com' }
   constructor() { }
 
 

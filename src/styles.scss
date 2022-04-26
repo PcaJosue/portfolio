@@ -4,11 +4,13 @@ font-family: 'Anton',sans-serif;
 font-family: 'EB Garamond', serif;
 */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=EB+Garamond&display=swap'); 
+@import 'src/app/styles/variables.scss';
 
 
 html,
 body {
     height: 100%;
+    background-color: $bg-dark;
 }
 
 body {

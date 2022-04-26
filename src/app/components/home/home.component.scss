@@ -3,9 +3,10 @@
 
 .home{
     background-color: $bg-dark;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     padding: 1.5rem;
+    position: relative;
 
     &__icons{
         display: flex;
@@ -21,26 +22,194 @@
         a{
             cursor: pointer;
         }
+        img{
+            @media (max-width: 1200px) {
+                width: 6rem;
+            }
+            @media (max-width: 1200px) {
+                width: 4.5rem;
+            }
+            @media (max-width: 600px) {
+                width: 3rem;
+            }
+
+        }
     }
 
     &__content{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 3em;
+        padding-left: 6rem;
+        font-family: $font-strong;
+        @media (max-width: 1200px) {
+            padding-left: 4rem;
+        }
+        @media (max-width: 1200px) {
+            padding-left: 2.5rem;
+        }
+        @media (max-width: 601px) {
+            padding-left: 1rem;
+        }
+
 
         &-title{
             display: flex;
             color: $white;
-            font-family: $font-strong;
-            font-size: 5em;
-            border-bottom: 2px solid $white;
+            font-size: 12rem;
+            @media (max-width: 1200px) {
+                font-size: 8rem;
+            }
+            @media (max-width: 900px) {
+                font-size: 5.5rem;
+            }
+            @media (max-width: 601px) {
+                font-size: 3rem;
+            }
+
+
+
+            &:nth-child(1){
+                border-bottom: 2px solid $white;
+            }
+            &.presentation{
+                font-size: 7rem;
+                @media (max-width: 1200px) {
+                    font-size: 7rem;
+                }
+                @media (max-width: 900px) {
+                    font-size: 4.5rem;
+                }
+                
+                @media (max-width: 601px) {
+                    font-size: 2rem;
+                }
+
+            }
             span{
                 opacity: 100%;
                 &:hover{
                     color: $primary;
                 }
             }
+        }
+
+        &-skills{
+            
+            color: $gray;
+            display: flex;
+            gap: 2rem;
+            font-size: 4rem;
+            opacity: 0;
+            animation: slowEntry 0.1s ease 4.5s 1 forwards alternate;
+            @media (max-width: 1200px) {
+                font-size: 4rem;
+            }
+            @media (max-width: 900px) {
+                font-size: 2.5rem;
+            }
+            @media (max-width: 601px) {
+                font-size: 1rem;
+            }
+
+        }
+        &-contact{
+            color: $white;
+            background-color: $primary;
+            padding: .3rem;
+            align-self: center;
+            font-size: 4rem;
+            border-radius: 33px;
+            margin: 2rem 0;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            width: 35%;
+            opacity: 0;
+            animation: slowEntry 0.1s ease 4.5s 1 forwards alternate;
+            position: relative;
+            transition: all .5s;
+            height: 60px;
+            margin-top: 15rem;
+            
+            @media (max-width: 900px) {
+                position: unset;
+                font-size: 2.5rem;
+                width: unset;
+                height: unset;
+                padding: 1rem;
+            }
+            @media (max-width: 600px) {
+                position: unset;
+                font-size: 1.5rem;
+                width: unset;
+                height: unset;
+                padding: 1rem;
+            }
+
+            span{
+                z-index: 2;
+                position: absolute;
+                width: 100%;
+                top: 7px;
+                left: 0;
+                @media (max-width: 900px) {
+                    position: unset;
+                }
+            }
+            &:hover{
+                background-color: $primary-dark;
+                &:after{
+                    width: 100%;
+                    @media (max-width: 900px) {
+                        width: unset;
+                    }
+                }
+            }
+            &:active {
+                transform: translateY(3px);
+            }
+            &:after{
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $primary-dark;
+                transition: all .5s;
+                border-radius: 33px;
+            }
+
+            
+        }
+
+    }
+
+    &-icon {
+        color: $white;
+        font-size: 6rem;
+        width: 6rem;
+        height: 6rem;
+
+        @media (max-width: 601px) {
+            font-size: 4rem;
+            width: 4rem;
+            height: 4rem;
+            right: calc(50% - 2rem);
+        }
+        
+        position: absolute;
+        bottom: 1.5rem;
+        right: calc(50% - 3rem);
+        cursor: pointer;
+        &:hover{
+            color: $primary;
+
+            
+        }
+        &:active{
+            transform: translateY(3px);
         }
     }
 }
@@ -52,14 +221,34 @@
     animation-iteration-count: 1;
 }
 
+
 .bounceIn {
     animation-name: bounceIn;
     animation-duration: .75s;
     
 }
 
-@for $i from 1 through 21 {
+.bounceIn2{
+    animation-name: bounceIn;
+    animation-delay: 10s;
+}
+
+
+@for $i from 1 through 50 {
     span.bounceIn:nth-child(#{$i}) {
         animation-delay: #{$i * 0.1}s;
     }
+}
+
+@for $i from 1 through 50 {
+    span.bounceIn2:nth-child(#{$i}) {
+        animation-delay: #{($i * 0.1) + 1.8}s;
+    }
+
+    @if $i > 10 {
+        .home__content-title.presentation span:nth-child(#{$i}) {
+            color: $primary;
+        }
+    }
+
 }
