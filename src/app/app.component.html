@@ -2,7 +2,7 @@
 
   <app-header (onMenu)="changeMenu($event)"></app-header>
   <section id="home" #home>
-    <app-home></app-home>
+    <app-home (onMenu)="changeMenu($event)"></app-home>
   </section>
   <section id="About" #about>
     <app-about></app-about>

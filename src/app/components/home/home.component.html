@@ -27,10 +27,10 @@
             <span *ngFor="let skill of skills">{{skill}}</span>
         </div>
 
-        <button class="home__content-contact"> <span>Contact me!</span> </button>
+        <button class="home__content-contact" (click)="selectMenu(menu.Contact)"> <span>Contact me!</span> </button>
 
 
     </div>
-    <mat-icon class="home-icon">expand_more</mat-icon>
+    <mat-icon class="home-icon" (click)="selectMenu(menu.About)">expand_more</mat-icon>
 
 </div>

@@ -1,1 +1,31 @@
-<div class="about"></div>
+<div class="about">
+
+
+    <div class="about__presentation">
+        <div class="about__presentation__photo">
+            <img src="../../../assets/images/profile.png" alt="profile image">
+        </div>
+        <div class="about__presentation__description">
+            <div class="about__presentation__description-title">Who am I?</div>
+            <div class="about__presentation__description-definition">
+                <span>I'm a systems engineer located in Quito, Ecuador.</span>
+                <span>I have a passion for programming, proble solving and creating intuitive
+                    web applications to improve the user experience.</span>
+                <span> I show you some of my main skills.</span>
+            </div>
+            <div class="about__presentation__description-phrase">
+                Let's make something special
+            </div>
+        </div>
+    </div>
+    <div class="about__skills">
+        <div class="about__skills__item" *ngFor="let skill of skills">
+            <div class="about__skills__item-name">{{skill.name}}</div>
+            <div class="about__skills__item-percentage">
+                <div [style.width]="skill.level+'%'"></div>
+            </div>
+            <div class="about__skills__item-level">{{skill.level}}%</div>
+        </div>
+    </div>
+
+</div>
