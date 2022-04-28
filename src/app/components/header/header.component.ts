@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Subject } from 'rxjs';
-import { MenuEnum } from 'src/app/models/menu';
+import { MenuEnum } from 'src/app/models/enums';
 import { HelperService } from 'src/app/services/helper.service';
 
 @Component({

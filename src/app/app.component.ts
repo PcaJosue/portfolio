@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import { MenuEnum } from './models/menu';
+import { MenuEnum } from './models/enums';
 import { HelperService } from './services/helper.service';
 
 @Component({
@@ -11,17 +11,19 @@ export class AppComponent implements AfterViewInit {
 
   @ViewChild('about') about: ElementRef;
   @ViewChild('home') home: ElementRef;
+  @ViewChild('projects') projects: ElementRef;
 
   constructor(public helperService: HelperService) { }
 
   ngAfterViewInit(): void {
     const observer = new window.IntersectionObserver(this.viewElement, {
       root: null,
-      threshold: 0.1, // set offset 0.1 means trigger if atleast 10% of element in viewport
+      threshold: 0.2, // set offset 0.1 means trigger if atleast 10% of element in viewport
     })
 
     observer.observe(this.about.nativeElement);
     observer.observe(this.home.nativeElement);
+    observer.observe(this.projects.nativeElement);
   }
 
   viewElement = ([entry]) => {
@@ -40,6 +42,9 @@ export class AppComponent implements AfterViewInit {
         break;
       case 'Home':
         this.home.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
+        break;
+      case MenuEnum.Projects:
+        this.projects.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
         break;
     }
   }

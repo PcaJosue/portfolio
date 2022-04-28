@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from 'src/app/models/data';
+import { Skill } from 'src/app/models/interfaces';
 
 @Component({
   selector: 'app-about',
@@ -7,16 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  skills: { name: string, level: number }[] = [
-    { name: 'CSS', level: 75 },
-    { name: 'HTML', level: 90 },
-    { name: 'Javascript', level: 80 },
-    { name: 'Angular', level: 75 },
-    { name: 'NodeJs', level: 70 },
-    { name: 'SQL', level: 70 },
-    { name: 'no SQL', level: 60 },
-    { name: 'Java', level: 60 },
-    { name: 'React', level: 50 }]
+  skills: Skill[] = Profile.about.skills;
 
   constructor() { }
 
