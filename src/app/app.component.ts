@@ -27,6 +27,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   viewElement = ([entry]) => {
+
     if (entry.isIntersecting && this.helperService) {
       this.helperService.menu = entry.target.id;
       return

@@ -18,13 +18,12 @@ export class HeaderComponent implements OnInit {
 
   constructor(public helperService: HelperService) { }
 
-  ngOnInit(): void {
-    console.log(this.menuEnum['About']);
-  }
+  ngOnInit(): void { }
 
 
   public selectMenu(title: string) {
     this.helperService.menu = title;
+    this.open = false;
     this.onMenu.emit(title);
   }
 
