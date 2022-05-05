@@ -1,0 +1,42 @@
+<div class="works">
+
+    <div class="works__title">
+        <div class="works__title__label">Where I've Worked</div>
+        <div class="works__title__line"></div>
+    </div>
+
+    <div class="works__content">
+
+        <div class="works__list">
+            <div (click)="workSelected=work;" [ngClass]="{'active':work.name == workSelected.name}"
+                *ngFor="let work of works">
+                {{work.name}}
+            </div>
+        </div>
+
+        <div class="works__item">
+            <div class="works__item__title">
+                <div class="works__item__title__position">
+                    {{workSelected.position}}
+                </div>
+                <a [href]="workSelected.url" target="_blank" class="works__item__title__company">
+                    @{{workSelected.name}}
+                </a>
+            </div>
+            <div class="works__item__dates">
+                <span>{{workSelected.startDate | date:'mediumDate' }}</span>
+                <span>-</span>
+                <span>{{workSelected.endDate ? (workSelected.endDate | date:'mediumDate') : 'Present'}}</span>
+            </div>
+            <div class="works__item__functions">
+                <ul>
+                    <li *ngFor="let function of workSelected.functions">
+                        {{function}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>

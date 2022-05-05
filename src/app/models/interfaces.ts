@@ -8,3 +8,12 @@ export interface Project {
     image: { src: string, url: string },
     links: { github?: string, web?: string }
 }
+
+export interface Work {
+    position: string,
+    name: string,
+    startDate: Date,
+    endDate: Date,
+    url: string,
+    functions: string[]
+}

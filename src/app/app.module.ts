@@ -8,6 +8,8 @@ import { HelperService } from './services/helper.service';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { MainProjectsComponent } from './components/main-projects/main-projects.component';
+import { WorkComponent } from './components/work/work.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { MainProjectsComponent } from './components/main-projects/main-projects.
     HomeComponent,
     AboutComponent,
     MainProjectsComponent,
+    WorkComponent,
   ],
   imports: [
     BrowserModule,
-    MatIconModule
+    MatIconModule,
+    CommonModule
 
   ],
   providers: [HelperService],

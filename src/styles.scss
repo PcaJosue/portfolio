@@ -6,6 +6,19 @@ font-family: 'EB Garamond', serif;
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=EB+Garamond&display=swap'); 
 @import 'src/app/styles/variables.scss';
 
+@font-face {
+    font-family: 'myriad-pro';
+    src: url('./assets/fonts/MYRIADPRO-REGULAR.OTF');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'myriad-pro';
+    src: url('./assets/fonts/MYRIADPRO-BOLD.OTF');
+    font-weight: bold;
+    font-style: normal;
+}
 
 html,
 body {

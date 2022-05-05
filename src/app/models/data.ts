@@ -59,5 +59,55 @@ export const Profile = {
             image: { src: '../../assets/images/pomodoro.png', url: 'https://github.com/PcaJosue/pomodoro' },
             links: { github: 'https://github.com/PcaJosue/pomodoro' }
         }
+    ],
+    works: [
+        {
+            position: 'Fullstack Developer',
+            name: 'Rumzer LLC',
+            startDate: new Date('02/01/2021'),
+            endDate: null,
+            url: 'https://rumzer.com/',
+            functions: [
+                'Build different UI component to display the functionality desired',
+                'Analyze the requirements,design and implements them',
+                "Build or manage the necessary API's",
+                'Teammate code review'
+            ]
+        },
+        {
+            position: 'Technical Consultant',
+            name: 'Kruger Corporation',
+            startDate: new Date('10/01/2018'),
+            endDate: new Date('12/01/2019'),
+            url: 'https://krugercorp.com/',
+            functions: [
+                'Develope and maintenance of web applications in Angular',
+                'Develope and maintenance of backend in Java - REST APIs',
+            ]
+        },
+        {
+            position: 'Junior Developer',
+            name: 'Frontera Global s.a.',
+            startDate: new Date('08/01/2018'),
+            endDate: new Date('10/01/2018'),
+            url: 'http://www.fronteraglobal.com/',
+            functions: [
+                'Develope of web applications in Angular',
+                'Develope of backend in Java - REST APIs',
+            ]
+        },
+        {
+            position: 'Intern',
+            name: 'Ministry of Industries and Productivity',
+            startDate: new Date('02/01/2017'),
+            endDate: new Date('02/12/2017'),
+            url: 'https://www.industrias.gob.ec/',
+            functions: [
+                'Functionality tests',
+                'Instalation and configuration of linux computers',
+                "Develope of reports",
+                'Develope of MVC web applications in JAVAEE - primefaces'
+            ]
+        }
     ]
 }

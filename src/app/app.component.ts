@@ -12,6 +12,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('about') about: ElementRef;
   @ViewChild('home') home: ElementRef;
   @ViewChild('projects') projects: ElementRef;
+  @ViewChild('works') works: ElementRef;
 
   constructor(public helperService: HelperService) { }
 
@@ -24,6 +25,7 @@ export class AppComponent implements AfterViewInit {
     observer.observe(this.about.nativeElement);
     observer.observe(this.home.nativeElement);
     observer.observe(this.projects.nativeElement);
+    observer.observe(this.works.nativeElement);
   }
 
   viewElement = ([entry]) => {
@@ -46,6 +48,9 @@ export class AppComponent implements AfterViewInit {
         break;
       case MenuEnum.Projects:
         this.projects.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+        break;
+      case MenuEnum.Work:
+        this.works.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
         break;
     }
   }
