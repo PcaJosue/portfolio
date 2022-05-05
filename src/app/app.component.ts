@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('home') home: ElementRef;
   @ViewChild('projects') projects: ElementRef;
   @ViewChild('works') works: ElementRef;
+  @ViewChild('contact') contact: ElementRef;
 
   constructor(public helperService: HelperService) { }
 
@@ -26,9 +27,13 @@ export class AppComponent implements AfterViewInit {
     observer.observe(this.home.nativeElement);
     observer.observe(this.projects.nativeElement);
     observer.observe(this.works.nativeElement);
+    observer.observe(this.contact.nativeElement);
   }
 
   viewElement = ([entry]) => {
+
+    console.log(entry.isIntersecting);
+    console.log(entry.target.id);
 
     if (entry.isIntersecting && this.helperService) {
       this.helperService.menu = entry.target.id;
@@ -51,6 +56,11 @@ export class AppComponent implements AfterViewInit {
         break;
       case MenuEnum.Work:
         this.works.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+        break;
+      case MenuEnum.Contact:
+        this.contact.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
+        break;
+      default:
         break;
     }
   }

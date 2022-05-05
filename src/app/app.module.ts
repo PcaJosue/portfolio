@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { MainProjectsComponent } from './components/main-projects/main-projects.component';
 import { WorkComponent } from './components/work/work.component';
 import { CommonModule } from '@angular/common';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CommonModule } from '@angular/common';
     AboutComponent,
     MainProjectsComponent,
     WorkComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

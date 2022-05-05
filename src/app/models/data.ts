@@ -109,5 +109,8 @@ export const Profile = {
                 'Develope of MVC web applications in JAVAEE - primefaces'
             ]
         }
-    ]
+    ],
+    contact: {
+        email: 'pca.josue@gmail.com'
+    }
 }
