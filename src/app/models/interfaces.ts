@@ -6,7 +6,7 @@ export interface Project {
     description: string,
     tools: string[],
     image: { src: string, url: string },
-    links: { github?: string, web?: string }
+    links: { github?: string, site?: string }
 }
 
 export interface Work {

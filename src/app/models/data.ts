@@ -24,40 +24,40 @@ export const Profile = {
             subtitle: 'Personal Project',
             description: 'A challenge from devchallenges.io, whose goal is to build a web application to display weekday weather information for different locations.',
             tools: ['Angular', 'API-REST', 'Typescript', 'SCSS', 'Jasmine', 'StoryBook'],
-            image: { src: '../../assets/images/weather.png', url: 'https://github.com/PcaJosue/weather-app' },
-            links: { github: 'https://github.com/PcaJosue/weather-app' }
+            image: { src: 'assets/images/weather.png', url: 'https://pcajosue.github.io/weather-app/' },
+            links: { github: 'https://github.com/PcaJosue/weather-app', site: 'https://pcajosue.github.io/weather-app/' }
         },
         {
             title: 'Meal App',
             subtitle: 'Personal Project',
             description: 'Website where you can find various food recipes, categorized by regions and types of food.',
             tools: ['Angular', 'API-REST', 'Typescript', 'SCSS', 'Jasmine', 'StoryBook'],
-            image: { src: '../../assets/images/mealApp.png', url: 'https://github.com/PcaJosue/meal-app' },
-            links: { github: 'https://github.com/PcaJosue/meal-app' }
+            image: { src: 'assets/images/mealApp.png', url: 'https://pcajosue.github.io/meal-app/' },
+            links: { github: 'https://github.com/PcaJosue/meal-app', site: 'https://pcajosue.github.io/meal-app/' }
         },
         {
             title: 'Curriculum Vitae App',
             subtitle: 'Personal Project',
             description: 'Web application where you can build your resume for free, you can choose between a format with design or a format for international basic.',
             tools: ['Angular', 'Typescript', 'SCSS', 'NGRX'],
-            image: { src: '../../assets/images/cv.png', url: 'https://github.com/PcaJosue/cv_app' },
-            links: { github: 'https://github.com/PcaJosue/cv_app' }
+            image: { src: 'assets/images/cv.png', url: 'https://pcajosue.github.io/cv_app/' },
+            links: { github: 'https://github.com/PcaJosue/cv_app', site: 'https://pcajosue.github.io/cv_app/' }
         },
         {
             title: 'Kanban',
             subtitle: 'Personal Project',
             description: 'The Kanban methodology is implemented by means of Kanban boards. It is a visual method of project management that allows teams to visualize their workflows and workload.On a Kanban board, work is displayed on a project in the form of a board organized by columns.Traditionally, each column represents a stage of the work.',
             tools: ['Angular', 'Typescript', 'SCSS', 'NGRX'],
-            image: { src: '../../assets/images/kanban.png', url: 'https://github.com/PcaJosue/kanban-app' },
-            links: { github: 'https://github.com/PcaJosue/kanban-app' }
+            image: { src: 'assets/images/kanban.png', url: 'https://pcajosue.github.io/kanban-app/' },
+            links: { github: 'https://github.com/PcaJosue/kanban-app', site: 'https://pcajosue.github.io/kanban-app/' }
         },
         {
             title: 'Pomodoro',
             subtitle: 'Personal Project',
             description: 'The Pomodoro Technique is a time management method that can be used for any task. For many, time is an enemy.The anxiety produced by "clock ticks," especially if you have a deadline, leads to inefficient work and study habits that in turn lead to procrastination.',
             tools: ['Angular', 'Typescript', 'SCSS', 'NGXS'],
-            image: { src: '../../assets/images/pomodoro.png', url: 'https://github.com/PcaJosue/pomodoro' },
-            links: { github: 'https://github.com/PcaJosue/pomodoro' }
+            image: { src: 'assets/images/pomodoro.png', url: 'https://pcajosue.github.io/pomodoro/' },
+            links: { github: 'https://github.com/PcaJosue/pomodoro', site: 'https://pcajosue.github.io/pomodoro/' }
         }
     ],
     works: [

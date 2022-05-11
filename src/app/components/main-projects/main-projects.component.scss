@@ -142,10 +142,14 @@
                 bottom: 5px;
                 right: 10px;
                 align-self: flex-end;
-                img{
+                display: flex;
+                gap:0.5rem;
+                img, mat-icon{
                     width: 25px;
                     height: 25px;
+                    color: $white;
                 }
+                
 
             }
 
