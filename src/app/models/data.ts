@@ -38,10 +38,10 @@ export const Profile = {
         {
             title: 'Curriculum Vitae App',
             subtitle: 'Personal Project',
-            description: 'Web application where you can build your resume for free, you can choose between a format with design or a format for international basic.',
+            description: "Create Your Future with Our Professional Resumes in our APP, To create an effective CV, it's important to tailor it to the job you are applying for. This means including relevant keywords and phrases that match the job description. Using clear, concise language and bullet points can also make your CV easier to read and understand.",
             tools: ['Angular', 'Typescript', 'SCSS', 'NGRX'],
             image: { src: 'assets/images/cv.png', url: 'https://pcajosue.github.io/cv_app/' },
-            links: { github: 'https://github.com/PcaJosue/cv_app', site: 'https://pcajosue.github.io/cv_app/' }
+            links: { github: 'https://github.com/PcaJosue/cv_app', site: 'https://pcajosue.github.io/cv-app-home/' }
         },
         {
             title: 'Kanban',
